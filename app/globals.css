@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Typography and base resets */
+:root {
+  color-scheme: dark;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  @apply text-brand-white hover:opacity-80 transition;
+}
+
+/* Container utility */
+.container-max {
+  @apply max-w-6xl mx-auto px-4;
+}
+
+
