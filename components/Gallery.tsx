@@ -1,39 +1,64 @@
 "use client";
 import Image from "next/image";
-import { useState } from "react";
-
-const images = Array.from({ length: 8 }, (_, i) => `/gallery/image${i + 1}.jpg`);
+import { useEffect, useMemo, useRef, useState } from "react";
 
 export default function Gallery() {
-  const [active, setActive] = useState<string | null>(null);
+  const [images, setImages] = useState<string[]>([]);
+  const [index, setIndex] = useState(0);
+  const intervalRef = useRef<number | null>(null);
+
+  useEffect(() => {
+    const load = async () => {
+      try {
+        const res = await fetch("/api/gallery", { cache: "no-store" });
+        const data = await res.json();
+        if (Array.isArray(data.images)) setImages(data.images);
+      } catch {}
+    };
+    load();
+  }, []);
+
+  useEffect(() => {
+    if (images.length === 0) return;
+    if (intervalRef.current) window.clearInterval(intervalRef.current);
+    intervalRef.current = window.setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length);
+    }, 3500);
+    return () => {
+      if (intervalRef.current) window.clearInterval(intervalRef.current);
+    };
+  }, [images]);
+
   return (
     <section id="gallery" className="border-t border-brand-gray/40 py-14">
       <div className="container-max">
         <h2 className="text-2xl font-semibold md:text-3xl">Event Gallery</h2>
-        <p className="mt-2 text-sm text-brand-lightgray/80">A glimpse of unforgettable moments we helped create.</p>
-        <div className="mt-6 grid grid-cols-2 gap-3 sm:grid-cols-3 md:grid-cols-4">
-          {images.map((src) => (
-            <button
-              key={src}
-              className="group relative aspect-square overflow-hidden rounded border border-brand-gray/40"
-              onClick={() => setActive(src)}
-              aria-label="Open image"
-            >
-              <Image src={src} alt="Event photo" fill className="object-cover transition-transform duration-200 group-hover:scale-105" sizes="(max-width: 768px) 50vw, (max-width: 1024px) 33vw, 25vw" />
-            </button>
-          ))}
+        <p className="mt-2 text-sm text-brand-lightgray/80">A rotating look at recent events and moments we loved.</p>
+
+        <div className="mt-6 overflow-hidden rounded-lg border border-brand-gray/40 bg-[#111]">
+          <div className="relative h-[52vw] max-h-[520px] min-h-[260px] w-full">
+            {images.map((src, i) => (
+              <div
+                key={src}
+                className="absolute inset-0 transition-opacity duration-700"
+                style={{ opacity: i === index ? 1 : 0 }}
+              >
+                <Image src={src} alt="Event photo" fill className="object-contain" sizes="100vw" />
+              </div>
+            ))}
+          </div>
         </div>
 
-        {active && (
-          <div
-            className="fixed inset-0 z-50 grid place-items-center bg-black/80 p-4"
-            onClick={() => setActive(null)}
-            role="dialog"
-            aria-modal
-          >
-            <div className="relative h-[80vh] w-full max-w-5xl">
-              <Image src={active} alt="Selected event photo" fill className="object-contain" />
-            </div>
+        {images.length > 0 && (
+          <div className="mt-4 flex justify-center gap-2">
+            {images.map((_, i) => (
+              <button
+                key={i}
+                aria-label={`Go to slide ${i + 1}`}
+                onClick={() => setIndex(i)}
+                className={`h-2 w-2 rounded-full ${i === index ? "bg-white" : "bg-white/30"}`}
+              />
+            ))}
           </div>
         )}
       </div>

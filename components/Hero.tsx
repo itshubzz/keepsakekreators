@@ -1,4 +1,5 @@
 import Image from "next/image";
+import PlayableVideo from "@/components/PlayableVideo";
 
 export default function Hero() {
   return (
@@ -23,13 +24,14 @@ export default function Hero() {
         <div className="relative w-full overflow-hidden rounded-lg bg-brand-black h-[55vh] md:h-[75vh]">
           <video
             className="h-full w-full object-contain"
-            src="/video/videokeeps.mp4"
-            playsInline
             autoPlay
             muted
+            playsInline
             loop
-            preload="metadata"
-          />
+            preload="auto"
+          >
+            <source src="/video/videokeeps.mp4" type="video/mp4" />
+          </video>
         </div>
       </div>
     </section>

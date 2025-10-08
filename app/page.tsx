@@ -4,6 +4,8 @@ import Packages from "@/components/Packages";
 import Gallery from "@/components/Gallery";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import About from "@/components/About";
+import Showcase from "@/components/Showcase";
 
 export default function HomePage() {
   return (
@@ -11,6 +13,8 @@ export default function HomePage() {
       <Navbar />
       <Hero />
       <Packages />
+      <About />
+      <Showcase />
       <Gallery />
       <Contact />
       <Footer />
