@@ -28,7 +28,8 @@ export default function Hero() {
             muted
             playsInline
             loop
-            preload="auto"
+            preload="metadata"
+            poster="/video/videokeeps-poster.jpg"
           >
             <source src="/video/videokeeps.mp4" type="video/mp4" />
           </video>
