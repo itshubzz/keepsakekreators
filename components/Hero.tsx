@@ -7,11 +7,11 @@ export default function Hero() {
       {/* Hero Banner */}
       <div className="bg-white dark:bg-gray-900 py-16 md:py-24">
         <div className="container-max text-center">
-          <h1 className="text-4xl font-bold leading-tight text-gray-900 dark:text-white md:text-6xl lg:text-7xl">
+          <h1 className="text-4xl font-medium italic leading-tight text-black dark:text-white md:text-6xl lg:text-7xl tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
             Transform Your Event Into
-            <span className="block text-blue-600 dark:text-blue-400">Unforgettable Memories</span>
+            <span className="block text-black dark:text-white font-medium italic">Unforgettable Memories</span>
           </h1>
-          <p className="mt-6 text-lg text-gray-600 dark:text-gray-300 md:text-xl max-w-3xl mx-auto">
+          <p className="mt-6 text-lg text-gray-800 dark:text-gray-300 md:text-xl max-w-3xl mx-auto font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>
             Professional photo booths that turn every celebration into a story worth sharing. 
             From intimate weddings to corporate galas, we create experiences that your guests will treasure forever.
           </p>
@@ -29,10 +29,10 @@ export default function Hero() {
       {/* Features Section */}
       <div className="container-max grid gap-8 py-16 md:grid-cols-2 md:items-center md:gap-12">
         <div>
-          <h2 className="text-3xl font-bold leading-tight text-gray-900 dark:text-white md:text-4xl">
+          <h2 className="text-3xl font-normal leading-tight text-black dark:text-white md:text-4xl tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
             Why Choose Keepsake Kreators?
           </h2>
-          <p className="mt-4 text-gray-600 dark:text-gray-300 md:text-lg">
+          <p className="mt-4 text-gray-800 dark:text-gray-300 md:text-lg font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>
             We're more than just photo booths—we're memory creators. Our premium setups bring 
             professional quality with a personal touch to every event.
           </p>
@@ -44,8 +44,8 @@ export default function Hero() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Open-Air & 360° Booths</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Flexible setups that adapt to any space and vibe</p>
+                <h3 className="font-medium text-black dark:text-white" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Open-Air & 360° Booths</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-400 font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Flexible setups that adapt to any space and vibe</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -55,8 +55,8 @@ export default function Hero() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Professional Attendant</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Dedicated support to keep your guests engaged and happy</p>
+                <h3 className="font-medium text-black dark:text-white" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Professional Attendant</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-400 font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Dedicated support to keep your guests engaged and happy</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -66,8 +66,8 @@ export default function Hero() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Instant Digital Sharing</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Photos delivered instantly via QR, text, or email</p>
+                <h3 className="font-medium text-black dark:text-white" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Instant Digital Sharing</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-400 font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Photos delivered instantly via QR, text, or email</p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -77,8 +77,8 @@ export default function Hero() {
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white">Custom Branding</h3>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Personalized overlays and backdrops to match your theme</p>
+                <h3 className="font-medium text-black dark:text-white" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Custom Branding</h3>
+                <p className="text-sm text-gray-700 dark:text-gray-400 font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>Personalized overlays and backdrops to match your theme</p>
               </div>
             </div>
           </div>
