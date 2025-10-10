@@ -4,16 +4,18 @@
 
 /* Typography and base resets */
 :root {
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 html, body {
   margin: 0;
   padding: 0;
+  background-color: #ffffff;
+  color: #1f2937;
 }
 
 a {
-  @apply text-brand-white hover:opacity-80 transition;
+  @apply text-gray-700 hover:text-blue-600 transition-colors;
 }
 
 /* Container utility */

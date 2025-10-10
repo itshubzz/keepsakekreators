@@ -12,8 +12,8 @@ export default function HomePage() {
     <main>
       <Navbar />
       <Hero />
-      <Packages />
       <About />
+      <Packages />
       <Showcase />
       <Gallery />
       <Contact />

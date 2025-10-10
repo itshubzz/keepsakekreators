@@ -30,12 +30,12 @@ export default function Gallery() {
   }, [images]);
 
   return (
-    <section id="gallery" className="border-t border-brand-gray/40 py-14">
+    <section id="gallery" className="border-t border-gray-200 py-14 bg-white">
       <div className="container-max">
-        <h2 className="text-2xl font-semibold md:text-3xl">Event Gallery</h2>
-        <p className="mt-2 text-sm text-brand-lightgray/80">A rotating look at recent events and moments we loved.</p>
+        <h2 className="text-2xl font-semibold md:text-3xl text-gray-900">Event Gallery</h2>
+        <p className="mt-2 text-sm text-gray-600">A rotating look at recent events and moments we loved.</p>
 
-        <div className="mt-6 overflow-hidden rounded-lg border border-brand-gray/40 bg-[#111]">
+        <div className="mt-6 overflow-hidden rounded-lg border border-gray-200 bg-gray-100 shadow-lg">
           <div className="relative h-[52vw] max-h-[520px] min-h-[260px] w-full">
             {images.map((src, i) => (
               <div

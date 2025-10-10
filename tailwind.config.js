@@ -8,10 +8,10 @@ module.exports = {
     extend: {
       colors: {
         brand: {
-          black: "#0a0a0a",
+          black: "#1f2937",
           white: "#ffffff",
-          gray: "#1f1f1f",
-          lightgray: "#e5e7eb"
+          gray: "#6b7280",
+          lightgray: "#9ca3af"
         }
       }
     },
