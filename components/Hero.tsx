@@ -3,23 +3,23 @@ import PlayableVideo from "@/components/PlayableVideo";
 
 export default function Hero() {
   return (
-    <section id="home" className="relative bg-gradient-to-br from-gray-50 to-gray-100 dark:from-gray-900 dark:to-gray-800">
+    <section id="home" className="relative bg-black">
       {/* Hero Banner */}
-      <div className="bg-white dark:bg-gray-900 py-16 md:py-24">
+      <div className="bg-black py-16 md:py-24">
         <div className="container-max text-center">
-          <h1 className="text-4xl font-medium italic leading-tight text-black dark:text-white md:text-6xl lg:text-7xl tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
+          <h1 className="text-4xl font-medium italic leading-tight text-white md:text-6xl lg:text-7xl tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
             Transform Your Event Into
-            <span className="block text-black dark:text-white font-medium italic">Unforgettable Memories</span>
+            <span className="block text-white font-medium italic">Unforgettable Memories</span>
           </h1>
-          <p className="mt-6 text-lg text-gray-800 dark:text-gray-300 md:text-xl max-w-3xl mx-auto font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>
+          <p className="mt-6 text-lg text-gray-300 md:text-xl max-w-3xl mx-auto font-light" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>
             Professional photo booths that turn every celebration into a story worth sharing. 
             From intimate weddings to corporate galas, we create experiences that your guests will treasure forever.
           </p>
           <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-            <a href="#packages" className="inline-flex items-center justify-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-lg hover:bg-blue-700 transition-colors">
+            <a href="#packages" className="inline-flex items-center justify-center px-8 py-4 bg-white text-black font-medium rounded-lg hover:bg-gray-100 transition-colors" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>
               Explore Our Packages
             </a>
-            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-gray-300 dark:border-gray-600 text-gray-700 dark:text-gray-300 font-semibold rounded-lg hover:bg-gray-50 dark:hover:bg-gray-800 transition-colors">
+            <a href="#contact" className="inline-flex items-center justify-center px-8 py-4 border-2 border-white text-white font-medium rounded-lg hover:bg-white hover:text-black transition-colors" style={{ fontFamily: "'Inter', 'Helvetica Neue', Arial, sans-serif" }}>
               Get a Quote
             </a>
           </div>
@@ -27,7 +27,8 @@ export default function Hero() {
       </div>
 
       {/* Features Section */}
-      <div className="container-max grid gap-8 py-16 md:grid-cols-2 md:items-center md:gap-12">
+      <div className="bg-white py-16">
+        <div className="container-max grid gap-8 md:grid-cols-2 md:items-center md:gap-12">
         <div>
           <h2 className="text-3xl font-normal leading-tight text-black dark:text-white md:text-4xl tracking-tight" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>
             Why Choose Keepsake Kreators?
@@ -95,6 +96,7 @@ export default function Hero() {
             <source src="/video/videokeeps.mp4" type="video/mp4" />
           </video>
         </div>
+      </div>
       </div>
     </section>
   );
