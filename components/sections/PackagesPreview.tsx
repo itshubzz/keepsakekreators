@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
-import { Clock, Check, Sparkles } from 'lucide-react';
+import { Clock, Check } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
 import { galleryImages, blurDataURL } from '@/lib/site';
@@ -19,7 +19,6 @@ const tiers = [
     kind: 'Open Air / 360',
     hours: '4 Hours',
     image: galleryImages[8].src,
-    featured: true,
   },
   {
     name: 'Signature',
@@ -58,11 +57,7 @@ export default function PackagesPreview() {
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, margin: '-80px' }}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                className={`group relative flex items-center gap-4 overflow-hidden rounded-3xl border p-3 pr-6 transition-all duration-500 hover:-translate-y-0.5 ${
-                  t.featured
-                    ? 'border-neon-magenta/60 bg-ink-800/90 shadow-neon-pink'
-                    : 'border-white/10 bg-ink-800/60 hover:border-white/25'
-                }`}
+                className="group relative flex items-center gap-4 overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-3 pr-6 transition-all duration-500 hover:-translate-y-0.5 hover:border-white/25"
               >
                 <div className="relative h-24 w-24 flex-none overflow-hidden rounded-2xl ring-1 ring-white/10 sm:h-28 sm:w-28">
                   <Image
@@ -84,11 +79,6 @@ export default function PackagesPreview() {
                   <Clock className="h-3.5 w-3.5 text-neon-magenta" />
                   {t.hours}
                 </div>
-                {t.featured && (
-                  <div className="absolute right-3 top-3 inline-flex items-center gap-1 rounded-full bg-neon-magenta px-2 py-0.5 text-[9px] font-bold uppercase tracking-[0.2em] text-white shadow-neon-pink">
-                    <Sparkles className="h-2.5 w-2.5" /> Top pick
-                  </div>
-                )}
               </motion.div>
             ))}
           </div>

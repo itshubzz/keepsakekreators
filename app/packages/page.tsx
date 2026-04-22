@@ -2,7 +2,6 @@ import type { Metadata } from 'next';
 import Image from 'next/image';
 import {
   Check,
-  Sparkles,
   Clock,
   ImageIcon,
   Send,
@@ -60,7 +59,6 @@ const plans = [
       'An extra hour of magic for mid-size weddings, sweet sixteens, and galas. Most-booked for 150–300 guest events.',
     image: galleryImages[8].src,
     accent: 'from-neon-magenta/35 to-neon-violet/10',
-    featured: true,
   },
   {
     name: 'Signature',
@@ -92,17 +90,8 @@ export default function PackagesPage() {
           {plans.map((plan, i) => (
             <div
               key={plan.name}
-              className={`group relative flex flex-col overflow-hidden rounded-3xl border transition-all duration-500 ${
-                plan.featured
-                  ? 'border-neon-magenta/60 bg-gradient-to-b from-ink-800/90 to-ink-900/80 shadow-neon-pink md:-translate-y-3'
-                  : 'border-white/10 bg-ink-800/60 hover:-translate-y-1 hover:border-white/25'
-              }`}
+              className="group relative flex flex-col overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 transition-all duration-500 hover:-translate-y-1 hover:border-white/25"
             >
-              {plan.featured && (
-                <div className="absolute left-1/2 top-5 z-10 inline-flex -translate-x-1/2 items-center gap-1.5 rounded-full bg-neon-magenta px-3 py-1 text-[10px] font-bold uppercase tracking-[0.25em] text-white shadow-neon-pink">
-                  <Sparkles className="h-3 w-3" /> Most booked
-                </div>
-              )}
 
               <div className="relative aspect-[5/4] w-full overflow-hidden">
                 <Image
@@ -155,7 +144,6 @@ export default function PackagesPage() {
                 <Button
                   href="/contact"
                   className="mt-8 w-full"
-                  variant={plan.featured ? 'primary' : 'ghost'}
                   withArrow
                 >
                   Book {plan.name}
