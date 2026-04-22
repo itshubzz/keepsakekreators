@@ -53,10 +53,3 @@ export const galleryImages = Array.from({ length: 22 }, (_, i) => ({
 
 export const blurDataURL =
   'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAEUlEQVR4nGMQ59TBihiGlgQAZ/ETAVeTG+0AAAAASUVORK5CYII=';
-
-export const heroVideos = [
-  '/video/videokeeps.mp4',
-  '/video/videokeeps2.mp4',
-  '/video/videokeeps3.mp4',
-  '/video/videokeeps4.mp4',
-];
