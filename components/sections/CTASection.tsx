@@ -29,24 +29,34 @@ export default function CTASection() {
           }}
         />
 
-        <div className="relative grid items-center gap-8 lg:grid-cols-[1.3fr_1fr]">
+        <div className="relative flex flex-col items-center gap-8 text-center">
           <div>
             <div className="eyebrow text-neon-magenta">Ready when you are</div>
             <h2 className="display mt-4 text-4xl sm:text-5xl md:text-6xl">
               Your next event <br />
               <span className="text-gradient">deserves a reel</span>.
             </h2>
-            <p className="mt-5 max-w-xl text-white/75 sm:text-lg">
+            <p className="mx-auto mt-5 max-w-xl text-white/75 sm:text-lg">
               Tell us the date, the vibe, and the venue — we'll send you a
               quote in under 24 hours and lock in dates that actually fit your
               production.
             </p>
           </div>
-          <div className="flex gap-3 sm:items-center lg:justify-end">
-            <Button href="/contact" size="lg" withArrow className="flex-1 sm:flex-initial">
+          <div className="flex w-full max-w-md gap-3 sm:w-auto">
+            <Button
+              href="/contact"
+              size="lg"
+              withArrow
+              className="flex-1 sm:flex-initial"
+            >
               Check Availability
             </Button>
-            <Button href="/packages" size="lg" variant="outline" className="flex-1 sm:flex-initial">
+            <Button
+              href="/packages"
+              size="lg"
+              variant="outline"
+              className="flex-1 sm:flex-initial"
+            >
               View Packages
             </Button>
           </div>
