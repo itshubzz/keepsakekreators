@@ -19,7 +19,7 @@ const services = [
     title: '360° Video Booth',
     summary:
       'A rotating camera arm captures you from every angle in cinematic slow-motion. It\'s the moment your guests will post before they even leave the venue.',
-    image: galleryImages[1].src,
+    image: galleryImages[11].src,
     features: [
       '4K slow-motion capture',
       'LED-lit platform with branded base',
@@ -34,7 +34,7 @@ const services = [
     title: 'Premium Photo Booth',
     summary:
       'Open-air and mirror setups with magazine-quality lighting, unlimited prints, GIFs, and boomerangs — plus a prop table curated for your event.',
-    image: galleryImages[5].src,
+    image: galleryImages[4].src,
     features: [
       'DSLR quality, 12-second prints',
       'GIFs, boomerangs, and stills',
@@ -49,7 +49,7 @@ const services = [
     title: 'Custom Branding',
     summary:
       'Your event, your aesthetic. We design every visible surface — overlays, backdrops, microsite, share template — so the content stays on-brand wherever it lands.',
-    image: galleryImages[9].src,
+    image: galleryImages[7].src,
     features: [
       'Bespoke overlay + print design',
       'Backdrop + floor decal options',
@@ -64,7 +64,7 @@ const services = [
     title: 'Instant Sharing & Live Gallery',
     summary:
       'Every photo and reel lands on guests\' phones while they\'re still on the dance floor. Optional live gallery wall turns the room itself into the feed.',
-    image: galleryImages[12].src,
+    image: galleryImages[1].src,
     features: [
       'AirDrop, SMS, email, QR delivery',
       'Custom-hashtag live gallery wall',
@@ -88,7 +88,7 @@ export default function ServicesPage() {
         description="Mix and match. We'll tailor the activation to the venue, the crowd, and the content plan — from an intimate micro-wedding to a 1,000-guest activation."
       />
 
-      <section className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 sm:pt-16">
+      <section className="mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 sm:pt-32">
         <div className="space-y-20 lg:space-y-28">
           {services.map((svc, i) => (
             <div

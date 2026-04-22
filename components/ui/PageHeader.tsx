@@ -12,8 +12,16 @@ interface PageHeaderProps {
 export default function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
   return (
     <section className="relative isolate overflow-hidden pb-20 pt-36 sm:pb-28 sm:pt-40">
-      <GlowOrb className="-left-32 top-10" color="magenta" size={420} />
-      <GlowOrb className="-right-32 top-0" color="violet" size={420} />
+      <GlowOrb
+        className="!opacity-15 -left-32 top-10 hidden sm:block sm:!opacity-25 lg:!opacity-30"
+        color="magenta"
+        size={360}
+      />
+      <GlowOrb
+        className="!opacity-10 -right-32 top-0 hidden sm:block sm:!opacity-20 lg:!opacity-25"
+        color="violet"
+        size={360}
+      />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

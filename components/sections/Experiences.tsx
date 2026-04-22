@@ -13,7 +13,7 @@ const experiences = [
     description:
       'Cinematic slow-mo that spins around you. Guests step up, strike a pose, and walk away with a shareable reel in seconds.',
     icon: Aperture,
-    image: galleryImages[0].src,
+    image: galleryImages[9].src,
     tone: 'from-neon-magenta/30 to-neon-violet/10',
     bullets: ['Slow-motion 4K', 'Branded intro/outro', 'Instant phone delivery'],
   },
@@ -22,7 +22,7 @@ const experiences = [
     description:
       'High-end mirror and open-air setups with premium props, custom overlays, and prints in under 12 seconds.',
     icon: Camera,
-    image: galleryImages[3].src,
+    image: galleryImages[5].src,
     tone: 'from-neon-cyan/25 to-neon-violet/10',
     bullets: ['Unlimited prints', 'GIF + boomerang', 'Curated prop styling'],
   },
@@ -31,7 +31,7 @@ const experiences = [
     description:
       'Your logo, your colors, your vibe. We design overlays, backdrops, and sharing templates that match the event.',
     icon: Sparkles,
-    image: galleryImages[7].src,
+    image: galleryImages[0].src,
     tone: 'from-neon-violet/30 to-neon-magenta/10',
     bullets: ['Bespoke overlays', 'Backdrop design', 'Event-day setup included'],
   },
@@ -40,7 +40,7 @@ const experiences = [
     description:
       'AirDrop, SMS, QR, email — guests get their content while they\'re still on the dance floor. Your hashtag, trending.',
     icon: Share2,
-    image: galleryImages[10].src,
+    image: galleryImages[13].src,
     tone: 'from-neon-magenta/25 to-neon-cyan/10',
     bullets: ['AirDrop + QR', 'Custom microsite', 'Live gallery wall'],
   },

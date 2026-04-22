@@ -58,7 +58,7 @@ const plans = [
     hours: 4,
     summary:
       'An extra hour of magic for mid-size weddings, sweet sixteens, and galas. Most-booked for 150–300 guest events.',
-    image: galleryImages[5].src,
+    image: galleryImages[8].src,
     accent: 'from-neon-magenta/35 to-neon-violet/10',
     featured: true,
   },
@@ -87,7 +87,7 @@ export default function PackagesPage() {
         description="Three all-in packages. Open Air, 360°, or both — every tier ships with unlimited prints, instant sharing, and a full pro crew on-site."
       />
 
-      <section className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-16">
+      <section className="mx-auto max-w-7xl px-4 pb-24 pt-24 sm:px-6 sm:pt-32">
         <div className="grid gap-6 md:grid-cols-3 md:items-stretch">
           {plans.map((plan, i) => (
             <div
