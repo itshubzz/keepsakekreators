@@ -70,7 +70,8 @@ export default function EventTypes() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.55, delay: i * 0.08 }}
-            className="group relative aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl ring-1 ring-white/10 transition-transform duration-500 hover:-translate-y-1"
+            whileHover={{ y: -6 }}
+            className="group relative aspect-[3/4] cursor-pointer overflow-hidden rounded-2xl ring-1 ring-white/10"
           >
             <Image
               src={e.image}

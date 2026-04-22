@@ -76,7 +76,7 @@ export default function SocialSection() {
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-80px' }}
                   transition={{ duration: 0.5, delay: i * 0.1 }}
-                  className={`group relative flex items-center gap-4 overflow-hidden rounded-2xl border bg-ink-800/70 p-4 pr-5 transition-all duration-500 hover:-translate-y-0.5 hover:bg-ink-800 sm:p-5 ${p.border}`}
+                  className={`group relative flex items-center gap-4 overflow-hidden rounded-2xl border bg-ink-800/70 p-4 pr-5 transition-[border-color,box-shadow,background-color] duration-500 hover:-translate-y-0.5 hover:bg-ink-800 sm:p-5 ${p.border}`}
                 >
                   <div
                     aria-hidden

@@ -75,7 +75,7 @@ export default function Experiences() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: '-100px' }}
             transition={{ duration: 0.6, delay: i * 0.08 }}
-            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-6 transition-all duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_30px_80px_rgba(255,45,149,0.15)] sm:p-8"
+            className="group relative overflow-hidden rounded-3xl border border-white/10 bg-ink-800/60 p-6 transition-[border-color,box-shadow,background-color] duration-500 hover:-translate-y-1 hover:border-white/20 hover:shadow-[0_30px_80px_rgba(255,45,149,0.15)] sm:p-8"
           >
             <div
               aria-hidden
