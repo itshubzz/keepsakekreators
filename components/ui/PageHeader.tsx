@@ -13,14 +13,14 @@ export default function PageHeader({ eyebrow, title, description }: PageHeaderPr
   return (
     <section className="relative isolate overflow-hidden pb-20 pt-36 sm:pb-28 sm:pt-40">
       <GlowOrb
-        className="!opacity-15 -left-32 top-10 hidden sm:block sm:!opacity-25 lg:!opacity-30"
+        className="!opacity-10 -left-32 top-10 sm:!opacity-25 lg:!opacity-30"
         color="magenta"
-        size={360}
+        size={320}
       />
       <GlowOrb
-        className="!opacity-10 -right-32 top-0 hidden sm:block sm:!opacity-20 lg:!opacity-25"
+        className="!opacity-[0.08] -right-32 top-0 sm:!opacity-20 lg:!opacity-25"
         color="violet"
-        size={360}
+        size={320}
       />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">
         <motion.div

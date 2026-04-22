@@ -46,7 +46,7 @@ export const navLinks = [
   { href: '/contact', label: 'Contact' },
 ] as const;
 
-export const galleryImages = Array.from({ length: 16 }, (_, i) => ({
+export const galleryImages = Array.from({ length: 22 }, (_, i) => ({
   src: `/gallery/image${i + 1}.webp`,
   alt: `Keepsake Kreators event moment ${i + 1}`,
 }));
