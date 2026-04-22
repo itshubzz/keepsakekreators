@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --scrollbar-track: #0a0216;
+  --scrollbar-track: #120830;
   --scrollbar-thumb: #ff2d95;
 }
 
@@ -18,7 +18,7 @@ html {
 
 html,
 body {
-  background: #05010a;
+  background: #090320;
   color: #fff;
   min-height: 100%;
 }
