@@ -12,7 +12,7 @@ const tiers = [
     name: 'Premium',
     kind: 'Open Air / 360',
     hours: '3 Hours',
-    image: galleryImages[2].src,
+    image: galleryImages[21].src,
   },
   {
     name: 'Luxury',

@@ -49,7 +49,7 @@ const services = [
     title: 'Custom Branding',
     summary:
       'Your event, your aesthetic. We design every visible surface — overlays, backdrops, microsite, share template — so the content stays on-brand wherever it lands.',
-    image: galleryImages[7].src,
+    image: galleryImages[19].src,
     features: [
       'Bespoke overlay + print design',
       'Backdrop + floor decal options',
@@ -64,7 +64,7 @@ const services = [
     title: 'Instant Sharing & Live Gallery',
     summary:
       'Every photo and reel lands on guests\' phones while they\'re still on the dance floor. Optional live gallery wall turns the room itself into the feed.',
-    image: galleryImages[1].src,
+    image: galleryImages[13].src,
     features: [
       'AirDrop, SMS, email, QR delivery',
       'Custom-hashtag live gallery wall',

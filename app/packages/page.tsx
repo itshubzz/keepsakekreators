@@ -48,7 +48,7 @@ const plans = [
     hours: 3,
     summary:
       'Our signature package. Perfect for intimate weddings, showers, and private parties that still want the full booth experience.',
-    image: galleryImages[2].src,
+    image: galleryImages[21].src,
     accent: 'from-neon-cyan/30 to-neon-violet/10',
   },
   {

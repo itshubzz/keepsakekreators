@@ -1,6 +1,8 @@
 import Hero from '@/components/sections/Hero';
 import Marquee from '@/components/ui/Marquee';
 import Experiences from '@/components/sections/Experiences';
+import Spotlight from '@/components/sections/Spotlight';
+import EventTypes from '@/components/sections/EventTypes';
 import GalleryPreview from '@/components/sections/GalleryPreview';
 import HowItWorks from '@/components/sections/HowItWorks';
 import PackagesPreview from '@/components/sections/PackagesPreview';
@@ -23,6 +25,8 @@ export default function HomePage() {
         ]}
       />
       <Experiences />
+      <Spotlight />
+      <EventTypes />
       <GalleryPreview />
       <HowItWorks />
       <PackagesPreview />

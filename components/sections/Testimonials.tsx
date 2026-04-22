@@ -18,7 +18,7 @@ const testimonials = [
       "Keepsake made our launch party feel like a premiere. The branding was on-point and the team ran everything flawlessly.",
     name: 'Carla R.',
     event: 'Brand Launch · Nike Collab',
-    image: '/gallery/image6.webp',
+    image: '/gallery/image17.webp',
   },
   {
     quote:
