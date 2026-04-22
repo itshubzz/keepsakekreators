@@ -28,6 +28,19 @@ body {
   overflow-x: hidden;
 }
 
+/* iOS Safari forces an intrinsic min-width on native date/time inputs;
+   this kills that so they respect their grid cell width on mobile. */
+input[type='date'],
+input[type='time'],
+input[type='datetime-local'],
+input[type='month'],
+input[type='week'] {
+  -webkit-appearance: none;
+  appearance: none;
+  min-width: 0;
+  max-width: 100%;
+}
+
 ::selection {
   background: #ff2d95;
   color: #05010a;

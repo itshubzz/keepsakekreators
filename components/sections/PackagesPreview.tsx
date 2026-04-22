@@ -123,11 +123,11 @@ export default function PackagesPreview() {
             <span className="font-semibold text-white">$200 deposit</span> due at booking to lock your date. Add-ons available on request.
           </p>
 
-          <div className="mt-6 flex flex-wrap gap-3">
-            <Button href="/packages" size="lg" withArrow>
+          <div className="mt-6 flex gap-3">
+            <Button href="/packages" size="lg" withArrow className="flex-1 sm:flex-initial">
               See all packages
             </Button>
-            <Button href="/contact" size="lg" variant="outline">
+            <Button href="/contact" size="lg" variant="outline" className="flex-1 sm:flex-initial">
               Check availability
             </Button>
           </div>

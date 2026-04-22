@@ -139,11 +139,11 @@ export default function ServicesPage() {
                   ))}
                 </ul>
 
-                <div className="mt-8 flex flex-wrap gap-3">
-                  <Button href="/contact" withArrow>
+                <div className="mt-8 flex gap-3">
+                  <Button href="/contact" withArrow className="flex-1 sm:flex-initial">
                     Book this experience
                   </Button>
-                  <Button href="/packages" variant="ghost">
+                  <Button href="/packages" variant="ghost" className="flex-1 sm:flex-initial">
                     See pricing
                   </Button>
                 </div>

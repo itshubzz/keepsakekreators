@@ -42,7 +42,7 @@ export default function BookingForm() {
       onSubmit={handleSubmit}
       className="relative grid gap-4 rounded-3xl border border-white/10 bg-ink-800/60 p-6 backdrop-blur sm:p-8"
     >
-      <div className="grid gap-4 sm:grid-cols-2">
+      <div className="grid gap-4 sm:grid-cols-2 [&>*]:min-w-0">
         <Field icon={User} label="Your name" name="name" placeholder="Jamie Carter" required />
         <Field icon={Users} label="Event type" name="event" placeholder="Wedding, gala, launch…" required />
         <Field icon={Mail} label="Email" name="email" type="email" placeholder="you@brand.com" required />
@@ -89,11 +89,11 @@ function Field({
       <span className="mb-2 block text-xs uppercase tracking-[0.25em] text-white/60">
         {label}
       </span>
-      <div className="group relative">
+      <div className="group relative w-full min-w-0">
         <Icon className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-white/40 transition-colors group-focus-within:text-neon-magenta" />
         <input
           {...rest}
-          className="w-full rounded-2xl border border-white/10 bg-ink-900/80 px-10 py-3 text-sm text-white outline-none transition-all placeholder:text-white/30 focus:border-neon-magenta focus:shadow-[0_0_0_4px_rgba(255,45,149,0.15)]"
+          className="block w-full min-w-0 appearance-none rounded-2xl border border-white/10 bg-ink-900/80 px-10 py-3 text-sm text-white outline-none transition-all placeholder:text-white/30 focus:border-neon-magenta focus:shadow-[0_0_0_4px_rgba(255,45,149,0.15)]"
         />
       </div>
     </label>

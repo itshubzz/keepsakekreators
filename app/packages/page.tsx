@@ -201,11 +201,11 @@ export default function PackagesPage() {
                 Multi-day festivals, brand activations, pop-up tours across venues — we've built it all. Tell us the shape of the event and we'll custom-quote the production.
               </p>
             </div>
-            <div className="flex flex-wrap gap-3 lg:justify-end">
-              <Button href="/contact" size="lg" withArrow>
+            <div className="flex gap-3 lg:justify-end">
+              <Button href="/contact" size="lg" withArrow className="flex-1 sm:flex-initial">
                 Request custom quote
               </Button>
-              <Button href="/services" size="lg" variant="outline">
+              <Button href="/services" size="lg" variant="outline" className="flex-1 sm:flex-initial">
                 See services
               </Button>
             </div>

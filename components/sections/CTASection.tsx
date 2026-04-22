@@ -42,11 +42,11 @@ export default function CTASection() {
               production.
             </p>
           </div>
-          <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center lg:justify-end">
-            <Button href="/contact" size="lg" withArrow>
+          <div className="flex gap-3 sm:items-center lg:justify-end">
+            <Button href="/contact" size="lg" withArrow className="flex-1 sm:flex-initial">
               Check Availability
             </Button>
-            <Button href="/packages" size="lg" variant="outline">
+            <Button href="/packages" size="lg" variant="outline" className="flex-1 sm:flex-initial">
               View Packages
             </Button>
           </div>

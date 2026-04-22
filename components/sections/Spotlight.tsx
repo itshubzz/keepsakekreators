@@ -120,11 +120,11 @@ export default function Spotlight() {
               ))}
             </ul>
 
-            <div className="mt-8 flex flex-wrap gap-3">
-              <Button href="/services" size="lg" withArrow>
+            <div className="mt-8 flex gap-3">
+              <Button href="/services" size="lg" withArrow className="flex-1 sm:flex-initial">
                 What we bring
               </Button>
-              <Button href="/contact" size="lg" variant="outline">
+              <Button href="/contact" size="lg" variant="outline" className="flex-1 sm:flex-initial">
                 Book the crew
               </Button>
             </div>
