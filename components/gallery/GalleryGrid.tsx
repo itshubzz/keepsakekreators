@@ -4,7 +4,7 @@ import { useCallback, useEffect, useState } from 'react';
 import Image from 'next/image';
 import { AnimatePresence, motion } from 'framer-motion';
 import { ChevronLeft, ChevronRight, X } from 'lucide-react';
-import { galleryImages } from '@/lib/site';
+import { galleryImages, blurDataURL } from '@/lib/site';
 
 export default function GalleryGrid() {
   const [active, setActive] = useState<number | null>(null);
@@ -55,6 +55,8 @@ export default function GalleryGrid() {
                 alt={img.alt}
                 fill
                 sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                placeholder="blur"
+                blurDataURL={blurDataURL}
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
             </div>
@@ -125,6 +127,8 @@ export default function GalleryGrid() {
                 alt={galleryImages[active].alt}
                 fill
                 sizes="100vw"
+                placeholder="blur"
+                blurDataURL={blurDataURL}
                 className="object-contain"
                 priority
               />

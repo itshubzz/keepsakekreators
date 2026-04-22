@@ -17,7 +17,7 @@ import {
 import PageHeader from '@/components/ui/PageHeader';
 import CTASection from '@/components/sections/CTASection';
 import Button from '@/components/ui/Button';
-import { site, galleryImages } from '@/lib/site';
+import { site, galleryImages, blurDataURL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Packages — Booth Experiences',
@@ -87,7 +87,7 @@ export default function PackagesPage() {
         description="Three all-in packages. Open Air, 360°, or both — every tier ships with unlimited prints, instant sharing, and a full pro crew on-site."
       />
 
-      <section className="mx-auto max-w-7xl px-4 pb-24 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 pb-24 pt-8 sm:px-6 sm:pt-16">
         <div className="grid gap-6 md:grid-cols-3 md:items-stretch">
           {plans.map((plan, i) => (
             <div
@@ -110,6 +110,8 @@ export default function PackagesPage() {
                   alt={`${plan.name} package`}
                   fill
                   sizes="(max-width: 768px) 100vw, 33vw"
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
                   className="object-cover transition-transform duration-700 group-hover:scale-105"
                 />
                 <div

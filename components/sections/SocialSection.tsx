@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { Instagram, Facebook, Play, ArrowUpRight } from 'lucide-react';
-import { galleryImages, site } from '@/lib/site';
+import { galleryImages, site, blurDataURL } from '@/lib/site';
 import TikTokIcon from '@/components/ui/TikTokIcon';
 import SectionHeading from '@/components/ui/SectionHeading';
 
@@ -109,7 +109,7 @@ export default function SocialSection() {
               <div className="relative rounded-xl border border-white/15 bg-white p-2 shadow-[0_15px_50px_rgba(139,92,246,0.35)]">
                 <div className="relative h-20 w-20 overflow-hidden rounded-lg sm:h-24 sm:w-24">
                   <Image
-                    src="/qr.png"
+                    src="/qr.webp"
                     alt="Instagram QR code"
                     fill
                     sizes="96px"
@@ -149,12 +149,11 @@ export default function SocialSection() {
                     muted
                     loop
                     playsInline
-                    preload="auto"
-                    poster="/gallery/image7.jpg"
+                    preload="metadata"
+                    poster="/gallery/image7.webp"
                     className="h-full w-full object-cover"
                   >
-                    <source src="/video/videokeeps2.mp4" type="video/mp4" />
-                    <source src="/video/videokeeps.mp4" type="video/mp4" />
+                    <source src="/video/videokeeps3.mp4" type="video/mp4" />
                   </video>
 
                   <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-black/60 to-transparent" />
@@ -237,6 +236,8 @@ export default function SocialSection() {
                   alt={img.alt}
                   fill
                   sizes="(max-width: 768px) 33vw, 16vw"
+                  placeholder="blur"
+                  blurDataURL={blurDataURL}
                   className="object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-ink-950/40 opacity-0 transition-opacity duration-500 group-hover:opacity-100">

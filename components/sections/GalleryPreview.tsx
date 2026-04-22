@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import { galleryImages } from '@/lib/site';
+import { galleryImages, blurDataURL } from '@/lib/site';
 
 export default function GalleryPreview() {
   const tiles = galleryImages.slice(0, 10);
@@ -53,6 +53,8 @@ export default function GalleryPreview() {
               alt={img.alt}
               fill
               sizes="(max-width: 768px) 50vw, 25vw"
+              placeholder="blur"
+              blurDataURL={blurDataURL}
               className="object-cover transition-transform duration-700 group-hover:scale-110"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-ink-950/70 via-transparent to-transparent opacity-70 transition-opacity duration-500 group-hover:opacity-40" />

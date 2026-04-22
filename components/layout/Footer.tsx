@@ -16,7 +16,7 @@ export default function Footer() {
           <Link href="/" className="flex items-center gap-3">
             <span className="relative inline-flex h-12 w-12 items-center justify-center overflow-hidden rounded-full ring-1 ring-white/20">
               <Image
-                src="/logo/logo.jpg"
+                src="/logo/logo.webp"
                 alt={site.name}
                 fill
                 sizes="48px"

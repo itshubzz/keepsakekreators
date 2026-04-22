@@ -33,7 +33,7 @@ export default function ContactPage() {
         description="Drop the details below. Your dedicated producer replies within 24 hours with quote, options, and next steps."
       />
 
-      <section className="mx-auto max-w-7xl px-4 pb-16 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 pb-16 pt-8 sm:px-6 sm:pt-16">
         <div className="grid gap-10 lg:grid-cols-[1.2fr_1fr]">
           <BookingForm />
 

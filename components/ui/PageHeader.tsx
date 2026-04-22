@@ -11,7 +11,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ eyebrow, title, description }: PageHeaderProps) {
   return (
-    <section className="relative isolate overflow-hidden pt-36 pb-16 sm:pt-40 sm:pb-24">
+    <section className="relative isolate overflow-hidden pb-20 pt-36 sm:pb-28 sm:pt-40">
       <GlowOrb className="-left-32 top-10" color="magenta" size={420} />
       <GlowOrb className="-right-32 top-0" color="violet" size={420} />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6">

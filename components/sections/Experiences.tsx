@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Aperture, Camera, Share2, Sparkles } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import { galleryImages } from '@/lib/site';
+import { galleryImages, blurDataURL } from '@/lib/site';
 
 const experiences = [
   {
@@ -110,6 +110,8 @@ export default function Experiences() {
                 alt={exp.title}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
+                placeholder="blur"
+                blurDataURL={blurDataURL}
                 className="object-cover transition-transform duration-700 group-hover:scale-110"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-ink-950/80 via-ink-950/10 to-transparent" />

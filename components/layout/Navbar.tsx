@@ -46,7 +46,7 @@ export default function Navbar() {
           <Link href="/" className="group flex items-center gap-3">
             <span className="relative inline-flex h-10 w-10 items-center justify-center overflow-hidden rounded-full ring-1 ring-white/20 transition-all duration-300 group-hover:ring-neon-magenta">
               <Image
-                src="/logo/logo.jpg"
+                src="/logo/logo.webp"
                 alt={site.name}
                 fill
                 sizes="40px"

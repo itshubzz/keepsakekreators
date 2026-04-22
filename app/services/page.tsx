@@ -4,7 +4,7 @@ import { Aperture, Camera, Share2, Sparkles, Check } from 'lucide-react';
 import PageHeader from '@/components/ui/PageHeader';
 import CTASection from '@/components/sections/CTASection';
 import Button from '@/components/ui/Button';
-import { galleryImages } from '@/lib/site';
+import { galleryImages, blurDataURL } from '@/lib/site';
 
 export const metadata: Metadata = {
   title: 'Services — 360° Booth, Photo Booth, Branding',
@@ -88,7 +88,7 @@ export default function ServicesPage() {
         description="Mix and match. We'll tailor the activation to the venue, the crowd, and the content plan — from an intimate micro-wedding to a 1,000-guest activation."
       />
 
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 sm:pt-16">
         <div className="space-y-20 lg:space-y-28">
           {services.map((svc, i) => (
             <div
@@ -104,6 +104,8 @@ export default function ServicesPage() {
                     alt={svc.title}
                     fill
                     sizes="(max-width: 1024px) 100vw, 50vw"
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
                     className="object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-ink-950/30 via-transparent to-transparent" />

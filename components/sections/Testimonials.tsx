@@ -11,28 +11,28 @@ const testimonials = [
       "The 360° booth was the talk of the wedding. Three months later guests are still DMing me their slow-mos.",
     name: 'Jasmine & Malik',
     event: 'Wedding · 220 guests',
-    image: '/gallery/image4.jpg',
+    image: '/gallery/image4.webp',
   },
   {
     quote:
       "Keepsake made our launch party feel like a premiere. The branding was on-point and the team ran everything flawlessly.",
     name: 'Carla R.',
     event: 'Brand Launch · Nike Collab',
-    image: '/gallery/image6.jpg',
+    image: '/gallery/image6.webp',
   },
   {
     quote:
       "Our sweet 16 trended on TikTok because of that booth. The line was longer than the dance floor — in the best way.",
     name: 'Sasha M.',
     event: 'Sweet 16 · NYC',
-    image: '/gallery/image11.jpg',
+    image: '/gallery/image11.webp',
   },
   {
     quote:
       "Zero stress day-of. They showed up early, dressed sharp, and every guest walked away with a keeper.",
     name: 'Elena D.',
     event: 'Corporate Gala · 500 guests',
-    image: '/gallery/image14.jpg',
+    image: '/gallery/image14.webp',
   },
 ];
 

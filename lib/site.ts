@@ -47,9 +47,12 @@ export const navLinks = [
 ] as const;
 
 export const galleryImages = Array.from({ length: 16 }, (_, i) => ({
-  src: `/gallery/image${i + 1}.jpg`,
+  src: `/gallery/image${i + 1}.webp`,
   alt: `Keepsake Kreators event moment ${i + 1}`,
 }));
+
+export const blurDataURL =
+  'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAgAAAAICAIAAABLbSncAAAACXBIWXMAAAABAAAAAQBPJcTWAAAAEUlEQVR4nGMQ59TBihiGlgQAZ/ETAVeTG+0AAAAASUVORK5CYII=';
 
 export const heroVideos = [
   '/video/videokeeps.mp4',

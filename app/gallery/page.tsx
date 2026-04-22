@@ -22,7 +22,7 @@ export default function GalleryPage() {
         description="Click any tile to enlarge. Arrow keys to browse. Every moment captured on-site, shared within seconds."
       />
 
-      <section className="mx-auto max-w-7xl px-4 pb-20 sm:px-6">
+      <section className="mx-auto max-w-7xl px-4 pb-20 pt-8 sm:px-6 sm:pt-16">
         <GalleryGrid />
       </section>
 

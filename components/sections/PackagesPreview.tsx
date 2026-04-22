@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Clock, Check, Sparkles } from 'lucide-react';
 import SectionHeading from '@/components/ui/SectionHeading';
 import Button from '@/components/ui/Button';
-import { galleryImages } from '@/lib/site';
+import { galleryImages, blurDataURL } from '@/lib/site';
 
 const tiers = [
   {
@@ -70,6 +70,8 @@ export default function PackagesPreview() {
                     alt={t.name}
                     fill
                     sizes="112px"
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
                     className="object-cover transition-transform duration-700 group-hover:scale-110"
                   />
                   <div className="absolute inset-0 bg-gradient-to-tr from-ink-950/50 via-transparent to-transparent" />

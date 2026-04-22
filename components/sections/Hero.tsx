@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Sparkles, Play } from 'lucide-react';
 import Button from '@/components/ui/Button';
 import GlowOrb from '@/components/ui/GlowOrb';
-import { heroVideos, galleryImages } from '@/lib/site';
+import { galleryImages, blurDataURL } from '@/lib/site';
 
 export default function Hero() {
   const highlightImages = [
@@ -17,18 +17,27 @@ export default function Hero() {
   return (
     <section className="relative isolate min-h-[100svh] w-full overflow-hidden">
       <div className="absolute inset-0 -z-10">
+        <Image
+          src="/gallery/image1.webp"
+          alt=""
+          aria-hidden
+          fill
+          sizes="100vw"
+          priority
+          placeholder="blur"
+          blurDataURL={blurDataURL}
+          className="object-cover"
+        />
         <video
           autoPlay
           muted
           loop
           playsInline
-          preload="auto"
-          poster="/gallery/image1.jpg"
-          className="h-full w-full object-cover"
+          preload="metadata"
+          poster="/gallery/image1.webp"
+          className="absolute inset-0 h-full w-full object-cover"
         >
-          {heroVideos.map((src) => (
-            <source key={src} src={src} type="video/mp4" />
-          ))}
+          <source src="/video/videokeeps2.mp4" type="video/mp4" />
         </video>
       </div>
 
@@ -157,8 +166,9 @@ export default function Hero() {
                     alt={img.alt}
                     fill
                     sizes="(max-width: 1024px) 0vw, 280px"
+                    placeholder="blur"
+                    blurDataURL={blurDataURL}
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
-                    priority={i === 0}
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 </div>

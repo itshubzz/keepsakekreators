@@ -32,7 +32,7 @@ export const metadata: Metadata = {
     type: 'website',
   },
   icons: {
-    icon: '/logo/logo.jpg',
+    icon: '/logo/logo.webp',
   },
 };
 
