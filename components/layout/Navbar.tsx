@@ -126,8 +126,8 @@ function SidebarMenu({
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-[60] bg-ink-950/75 backdrop-blur-md"
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-[60] bg-ink-950/80"
           />
 
           <motion.aside
@@ -136,24 +136,16 @@ function SidebarMenu({
             initial={{ x: '100%' }}
             animate={{ x: 0 }}
             exit={{ x: '100%' }}
-            transition={{ type: 'spring', stiffness: 260, damping: 32 }}
-            className="fixed inset-y-0 right-0 z-[70] flex w-[85%] max-w-md flex-col overflow-hidden border-l border-white/10 bg-ink-900/95 backdrop-blur-xl sm:w-[70%] lg:w-[42%] lg:max-w-lg"
+            transition={{ type: 'tween', duration: 0.35, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-y-0 right-0 z-[70] flex w-[85%] max-w-md flex-col overflow-hidden border-l border-white/10 bg-ink-900 sm:w-[70%] lg:w-[42%] lg:max-w-lg"
+            style={{
+              backgroundImage:
+                'linear-gradient(135deg, rgba(255,45,149,0.08) 0%, transparent 45%, rgba(34,211,238,0.06) 100%)',
+            }}
           >
             <div
               aria-hidden
-              className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(255,45,149,0.22),transparent_55%),radial-gradient(ellipse_at_bottom_left,rgba(34,211,238,0.15),transparent_55%)]"
-            />
-            <div
-              aria-hidden
               className="pointer-events-none absolute inset-y-0 left-0 w-px bg-gradient-to-b from-transparent via-neon-magenta/60 to-transparent"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -right-32 top-1/3 h-96 w-96 rounded-full bg-neon-magenta/20 blur-3xl"
-            />
-            <div
-              aria-hidden
-              className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-neon-violet/20 blur-3xl"
             />
 
             <div className="relative flex items-center justify-between border-b border-white/10 px-6 py-5 sm:px-8">
@@ -183,21 +175,21 @@ function SidebarMenu({
                   return (
                     <motion.li
                       key={link.href}
-                      initial={{ opacity: 0, x: 32 }}
+                      initial={{ opacity: 0, x: 24 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{
-                        duration: 0.45,
-                        delay: 0.1 + i * 0.06,
-                        ease: [0.22, 1, 0.36, 1],
+                        duration: 0.3,
+                        delay: 0.08 + i * 0.04,
+                        ease: 'easeOut',
                       }}
                     >
                       <Link
                         href={link.href}
                         onClick={onClose}
                         className={cn(
-                          'group relative flex items-center justify-between rounded-2xl border px-5 py-4 transition-all duration-300',
+                          'group relative flex items-center justify-between rounded-2xl border px-5 py-4 transition-colors duration-200',
                           active
-                            ? 'border-neon-magenta/60 bg-neon-magenta/10 shadow-neon-pink'
+                            ? 'border-neon-magenta/60 bg-neon-magenta/10'
                             : 'border-white/5 bg-white/[0.02] hover:border-white/20 hover:bg-white/[0.05]'
                         )}
                       >
@@ -216,7 +208,7 @@ function SidebarMenu({
                         </span>
                         <ArrowUpRight
                           className={cn(
-                            'h-5 w-5 transition-all duration-300 group-hover:-translate-y-0.5 group-hover:translate-x-0.5',
+                            'h-5 w-5 transition-colors duration-200',
                             active
                               ? 'text-neon-magenta'
                               : 'text-white/40 group-hover:text-neon-magenta'
@@ -229,16 +221,16 @@ function SidebarMenu({
               </ul>
 
               <motion.div
-                initial={{ opacity: 0, y: 24 }}
+                initial={{ opacity: 0, y: 16 }}
                 animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: 0.45 }}
+                transition={{ duration: 0.3, delay: 0.3 }}
                 className="mt-8"
               >
                 <a
                   href={`mailto:${site.email}?subject=${encodeURIComponent(
                     'Booking inquiry'
                   )}`}
-                  className="group flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-gradient-to-br from-neon-magenta/15 via-ink-800 to-neon-violet/15 p-5 transition-all duration-300 hover:border-neon-magenta/60 hover:shadow-neon-pink"
+                  className="group flex items-center justify-between gap-4 rounded-2xl border border-white/10 bg-ink-800 p-5 transition-colors duration-200 hover:border-neon-magenta/60"
                 >
                   <div className="min-w-0">
                     <div className="eyebrow text-neon-magenta">
@@ -251,7 +243,7 @@ function SidebarMenu({
                       {site.email}
                     </div>
                   </div>
-                  <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-neon-magenta text-white shadow-neon-pink transition-transform duration-300 group-hover:-translate-y-0.5">
+                  <span className="flex h-11 w-11 flex-none items-center justify-center rounded-full bg-neon-magenta text-white">
                     <Mail className="h-5 w-5" />
                   </span>
                 </a>
@@ -259,9 +251,9 @@ function SidebarMenu({
             </nav>
 
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
+              initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.55 }}
+              transition={{ duration: 0.3, delay: 0.35 }}
               className="relative border-t border-white/10 px-6 py-5 sm:px-8"
             >
               <div className="eyebrow mb-3 text-white/50">Follow the night</div>
@@ -315,7 +307,7 @@ function SocialLink({
       rel="noreferrer"
       aria-label={label}
       className={cn(
-        'group inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 text-sm text-white/85 transition-all duration-300 hover:-translate-y-0.5',
+        'group inline-flex h-10 flex-1 items-center justify-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 text-sm text-white/85 transition-colors duration-200',
         hover
       )}
     >

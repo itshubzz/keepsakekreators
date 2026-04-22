@@ -11,7 +11,7 @@ export default function CTASection() {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-80px' }}
         transition={{ duration: 0.7 }}
-        className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-ink-800/60 p-10 sm:p-16"
+        className="relative overflow-hidden rounded-[2.5rem] border border-white/10 bg-ink-800/60 p-6 sm:p-12 lg:p-16"
       >
         <div
           aria-hidden
@@ -45,19 +45,19 @@ export default function CTASection() {
           <div className="flex w-full max-w-md gap-3 sm:w-auto">
             <Button
               href="/contact"
-              size="lg"
               withArrow
-              className="flex-1 sm:flex-initial"
+              className="min-w-0 flex-1 sm:flex-initial sm:px-8 sm:py-4 sm:text-base"
             >
-              Check Availability
+              <span className="sm:hidden">Book</span>
+              <span className="hidden sm:inline">Check Availability</span>
             </Button>
             <Button
               href="/packages"
-              size="lg"
               variant="outline"
-              className="flex-1 sm:flex-initial"
+              className="min-w-0 flex-1 sm:flex-initial sm:px-8 sm:py-4 sm:text-base"
             >
-              View Packages
+              <span className="sm:hidden">Packages</span>
+              <span className="hidden sm:inline">View Packages</span>
             </Button>
           </div>
         </div>
